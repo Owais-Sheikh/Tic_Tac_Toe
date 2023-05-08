@@ -38,6 +38,13 @@ const [first9, setfirst9] = useState(0)
         setfirst8(0)
         setfirst9(0)
   }
+  const draw = () =>{
+    if((first===1 || first === 2) && (first2===1 || first2 === 2) && (first3===1 || first3 === 2) && (first4===1 || first4 === 2) && (first5===1 || first5 === 2) && (first6===1 || first6 === 2) && (first7===1 || first7 === 2) && (first8===1 || first8 === 2) && (first9===1 || first9 === 2)){
+      setTimeout(() => {
+        alert("Match Drwn");
+      }, 100);
+    }
+  }
   const reset = ()=>{
     $('#p1').text('Player 1')
     $('#p2').text('Player 2')
@@ -58,6 +65,7 @@ const [first9, setfirst9] = useState(0)
     if(player1 === true){
       $('.cross').show();
       setfirst(1)
+      draw();
       if((first2===1 && first3===1) || (first4===1 && first7===1) || (first5 === 1 && first9===1)){
         $('#p1').text("Won")
         setTimeout(() => {
@@ -73,6 +81,7 @@ const [first9, setfirst9] = useState(0)
     else if(player2 === true){
       $('.circle').show();
       setfirst(2)
+      draw();
       if((first2===2 && first3===2) || (first4===2 && first7===2) || (first5 === 2 && first9===2)){
         $('#p2').text("Won")
         setTimeout(() => {
@@ -94,6 +103,7 @@ else{
     if(player1 === true){
       $('.cross').show();
       setfirst2(1)
+      draw();
       if((first===1 && first3===1) || ( first5===1 && first8===1)){
         $('#p1').text("Won")
         setTimeout(() => {
@@ -109,6 +119,7 @@ else{
     else if(player2 === true){
       $('.circle').show();
       setfirst2(2)
+      draw();
       if((first===2 && first3===2) || ( first5===2 && first8===2)){
         $('#p2').text("Won")
         setTimeout(() => {
@@ -128,6 +139,7 @@ else{
     if(player1 === true){
       $('.cross').show();
       setfirst3(1)
+      draw();
       if((first2===1 && first===1) || (first5===1 && first7 === 1) || (first6 === 1 && first9 === 1)){
         $('#p1').text("Won")
         setTimeout(() => {
@@ -143,6 +155,7 @@ else{
     else if(player2 === true){
       $('.circle').show();
       setfirst3(2)
+      draw();
       if((first2===2 && first===2) || (first5===2 && first7 === 2) || (first6 === 2 && first9 === 2)){
         $('#p2').text("Won")
         setTimeout(() => {
@@ -160,6 +173,7 @@ else{
     if(player1 === true){
       $('.cross').show();
       setfirst4(1)
+      draw();
       if((first===1 && first7===1) || (first5===1 && first6===1) ){
         $('#p1').text('Won')
         setTimeout(() => {
@@ -175,6 +189,7 @@ else{
     else if(player2 === true){
       $('.circle').show();
       setfirst4(2)
+      draw();
       if((first===2 && first7===2) || (first5===2 && first6===2) ){
         $('#p2').text('Won')
         setTimeout(() => {
@@ -192,6 +207,7 @@ else{
     if(player1 === true){
       $('.cross').show();
       setfirst5(1)
+      draw();
       if((first4===1 && first6===1) || (first2===1 && first8===1) || (first3===1 && first7===1) || (first===1 && first9===1)){
         $('#p1').text('Won')
           setTimeout(() => {
@@ -207,6 +223,7 @@ else{
     else if(player2 === true){
       $('.circle').show();
       setfirst5(2)
+      draw();
       if((first4===2 && first6===2) || (first2===2 && first8===2) || (first3===2 && first7===2) || (first===2 && first9===2)){
         $('#p2').text('Won')
         setTimeout(() => {
@@ -224,6 +241,7 @@ else{
     if(player1 === true){
       $('.cross').show();
       setfirst6(1)
+      draw();
       if((first3===1 &&first9===1) || (first4===1 && first5===1)){
         $('#p1').text('Won')
         setTimeout(() => {
@@ -238,6 +256,7 @@ else{
     else if(player2 === true){
       $('.circle').show();
       setfirst6(2)
+      draw();
       if((first3===2 && first9===2) || (first4===2 && first5===2)){
         $('#p2').text('Won')
         setTimeout(() => {
@@ -255,6 +274,7 @@ else{
     if(player1 === true){
       $('.cross').show();
       setfirst7(1)
+      draw();
       if((first===1 && first4===1) || (first8===1 && first9===1) || (first5===1 && first3===1)){
         $('#p1').text("Won")
         setTimeout(() => {
@@ -269,6 +289,7 @@ else{
     else if(player2 === true){
       $('.circle').show();
       setfirst7(2)
+      draw();
       if((first===2 && first4===2) || (first8===2 && first9===2) || (first5===2 && first3===2)){
         $('#p2').text("Won")
         setTimeout(() => {
@@ -286,6 +307,7 @@ else{
     if(player1 === true){
       $('.cross').show();
       setfirst8(1)
+      draw();
       if((first7===1 && first9===1) || (first2===1 && first5===1)){
         $('#p1').text('Won')
         setTimeout(() => {
@@ -300,6 +322,7 @@ else{
     else if(player2 === true){
       $('.circle').show();
       setfirst8(2)
+      draw();
       if((first7===2 && first9===2) || (first2===2 && first5===2)){
         $('#p2').text('Won')
         setTimeout(() => {
@@ -317,6 +340,7 @@ else{
     if(player1 === true){
       $('.cross').show();
       setfirst9(1)
+      draw();
       if((first7===1 && first8===1) || (first3 === 1 && first6 === 1) || (first===1 && first5 === 1)){
         $('#p1').text('Won')
         setTimeout(() => {
@@ -331,6 +355,7 @@ else{
     else if(player2 === true){
       $('.circle').show();
       setfirst9(2)
+      draw();
       if((first7===2 && first8===2) || (first3 === 2 && first6 === 2) || (first===2 && first5 === 2)){
         $('#p2').text('Won')
         setTimeout(() => {
